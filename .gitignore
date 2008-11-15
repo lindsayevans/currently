@@ -1,0 +1,4 @@
+config/database.yml
+log/*
+config/initializers/site_keys.rb
+.DS_Store

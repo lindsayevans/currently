@@ -19,7 +19,7 @@ development:
   encoding: utf8
   database: currently_development
   username: root
-  password:
+  password: synergy
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and

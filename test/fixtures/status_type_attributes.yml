@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  status_type_id: 1
+  api_url_template: MyText
+  attribute_type_id: 1
+
+two:
+  status_type_id: 1
+  api_url_template: MyText
+  attribute_type_id: 1

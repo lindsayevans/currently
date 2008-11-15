@@ -1,0 +1,2 @@
+class StatusTypeAttributesController < ApplicationController
+end

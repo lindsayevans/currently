@@ -21,3 +21,59 @@ Migrating to CreateSessions (20081115221919)
   [4;36;1mSQL (0.002159)[0m   [0;1mSHOW FIELDS FROM `sessions`[0m
   [4;35;1mSQL (0.001967)[0m   [0mdescribe `sessions`[0m
   [4;36;1mSQL (0.000889)[0m   [0;1mSHOW KEYS FROM `sessions`[0m
+  [4;36;1mSQL (0.000150)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000453)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000259)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSessions (20081115221919)
+Migrating to CreateStatuses (20081115222620)
+  [4;36;1mSQL (0.001814)[0m   [0;1mCREATE TABLE `statuses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000236)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081115222620')[0m
+  [4;36;1mSQL (0.000539)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000181)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000382)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001789)[0m   [0mSHOW FIELDS FROM `sessions`[0m
+  [4;36;1mSQL (0.002285)[0m   [0;1mdescribe `sessions`[0m
+  [4;35;1mSQL (0.002172)[0m   [0mSHOW KEYS FROM `sessions`[0m
+  [4;36;1mSQL (0.003082)[0m   [0;1mSHOW FIELDS FROM `statuses`[0m
+  [4;35;1mSQL (0.002888)[0m   [0mdescribe `statuses`[0m
+  [4;36;1mSQL (0.000531)[0m   [0;1mSHOW KEYS FROM `statuses`[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000450)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000312)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSessions (20081115221919)
+Migrating to CreateStatuses (20081115222620)
+Migrating to CreateStatusTypes (20081115222740)
+  [4;36;1mSQL (0.004534)[0m   [0;1mCREATE TABLE `status_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `input_template` text, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000349)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081115222740')[0m
+Migrating to CreateStatusTypeAttributes (20081115222906)
+  [4;36;1mSQL (0.001809)[0m   [0;1mCREATE TABLE `status_type_attributes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `status_type_id` int(11), `api_url_template` text, `attribute_type_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000425)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081115222906')[0m
+Migrating to CreateAttributeTypes (20081115223014)
+  [4;36;1mSQL (0.004291)[0m   [0;1mCREATE TABLE `attribute_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000412)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081115223014')[0m
+Migrating to CreateStatusAttributes (20081115223120)
+  [4;36;1mSQL (0.001996)[0m   [0;1mCREATE TABLE `status_attributes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `status_id` int(11), `status_type_attribute_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000325)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081115223120')[0m
+  [4;36;1mSQL (0.000753)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000188)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000496)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.004629)[0m   [0mSHOW FIELDS FROM `attribute_types`[0m
+  [4;36;1mSQL (0.002074)[0m   [0;1mdescribe `attribute_types`[0m
+  [4;35;1mSQL (0.004407)[0m   [0mSHOW KEYS FROM `attribute_types`[0m
+  [4;36;1mSQL (0.003629)[0m   [0;1mSHOW FIELDS FROM `sessions`[0m
+  [4;35;1mSQL (0.006652)[0m   [0mdescribe `sessions`[0m
+  [4;36;1mSQL (0.001301)[0m   [0;1mSHOW KEYS FROM `sessions`[0m
+  [4;35;1mSQL (0.001850)[0m   [0mSHOW FIELDS FROM `status_attributes`[0m
+  [4;36;1mSQL (0.002259)[0m   [0;1mdescribe `status_attributes`[0m
+  [4;35;1mSQL (0.001148)[0m   [0mSHOW KEYS FROM `status_attributes`[0m
+  [4;36;1mSQL (0.004153)[0m   [0;1mSHOW FIELDS FROM `status_type_attributes`[0m
+  [4;35;1mSQL (0.004172)[0m   [0mdescribe `status_type_attributes`[0m
+  [4;36;1mSQL (0.000722)[0m   [0;1mSHOW KEYS FROM `status_type_attributes`[0m
+  [4;35;1mSQL (0.001815)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+  [4;36;1mSQL (0.002237)[0m   [0;1mdescribe `status_types`[0m
+  [4;35;1mSQL (0.001230)[0m   [0mSHOW KEYS FROM `status_types`[0m
+  [4;36;1mSQL (0.001336)[0m   [0;1mSHOW FIELDS FROM `statuses`[0m
+  [4;35;1mSQL (0.001900)[0m   [0mdescribe `statuses`[0m
+  [4;36;1mSQL (0.043612)[0m   [0;1mSHOW KEYS FROM `statuses`[0m

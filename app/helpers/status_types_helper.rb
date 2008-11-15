@@ -1,0 +1,2 @@
+module StatusTypesHelper
+end

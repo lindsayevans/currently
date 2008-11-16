@@ -8,3 +8,15 @@
     <%= form.label :input_template %><br />
     <%= form.text_area :input_template, :rows => 5, :cols => 80 %>
   </p>
+
+  <fieldset id="status_type_attributes">
+    <legend>Status Type Attributes</legend>
+    <div class="add"><%= add_status_type_attribute_link 'Add an attribute' %></div>
+
+<%= render :partial => 'status_type_attribute', :collection => @status_type.status_type_attributes %>
+
+  </fieldset>
+
+  <%= javascript_include_tag '/status_types/insertions.rjs' %>
+  <%= javascript_include_tag 'edit_status_type' %>
+

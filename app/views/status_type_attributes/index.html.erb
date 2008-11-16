@@ -1,0 +1,20 @@
+<h1>Listing Status Types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% for status_type in @status_types %>
+  <tr>
+    <td><%=h status_type.name %></td>
+    <td><%= link_to 'Show', status_type %></td>
+    <td><%= link_to 'Edit', edit_status_type_path(status_type) %></td>
+    <td><%= link_to 'Destroy', status_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New status type', new_status_type_path %>

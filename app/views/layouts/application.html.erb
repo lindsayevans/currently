@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title><%= @page_title -%></title>
+  <!%= stylesheet_link_tag 'frontend' %>
+  <%= javascript_include_tag :defaults %>
+</head>
+<body<%= ' class="'+@body_id+'"' unless @body_id.nil? -%><%= ' class="'+@body_class+'"' unless @body_class.nil? -%>>
+
+<div id="header">
+<% if params[:controller] == 'pages' && params[:action] == 'home' then -%>
+  <h1>Currently</h1>
+<% else -%>
+  <h2><a href="/">Currently</a></h2>
+<% end -%>
+</div>
+
+<% if flash.has_key?(:error) then -%><div class="error message"><%= flash[:error] %></div><% end -%>
+<% if flash.has_key?(:warning) then -%><div class="warning message"><%= flash[:warning] %></div><% end -%>
+<% if flash.has_key?(:notice) then -%><div class="notice message"><%= flash[:notice] %></div><% end -%>
+
+<%= yield  %>
+
+</body>
+</html>

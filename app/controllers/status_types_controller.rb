@@ -1,5 +1,14 @@
 class StatusTypesController < ApplicationController
 
+  before_filter :get_all_attribute_types
+  def get_all_attribute_types
+    @all_attribute_types = AttributeType.find :all, :order => 'name ASC'
+  end
+
+  def insertions
+    render :template => 'status_types/insertions.js.rjs'
+  end
+
   # GET /status_types
   # GET /status_types.xml
   def index

@@ -5,6 +5,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :status_type_attributes
 
+  map.connect 'status_types/insertions.rjs', :controller => 'status_types', :action => 'insertions'
   map.resources :status_types
 
   map.resources :statuses

@@ -1,0 +1,12 @@
+  <div class="status_type_attribute">
+    <%= link_to_function 'remove', "$(this).up('.status_type_attribute').remove();" %>
+<%
+new_or_existing = status_type_attribute.new_record? ? 'new' : 'existing'
+prefix = "status_type[#{new_or_existing}_status_type_attribute_attributes][]"
+
+fields_for prefix, status_type_attribute do |status_type_attribute_form|
+-%>
+    <%= render :partial => 'status_type_attributes/form', :locals => {:form => status_type_attribute_form} %>
+<% end -%>
+  </div>
+

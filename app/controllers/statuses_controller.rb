@@ -54,7 +54,7 @@ class StatusesController < ApplicationController
   # POST /statuss
   # POST /statuss.xml
   def create
-    @status = Status.new(params[:status_type])
+    @status = Status.new(params[:status])
 
     respond_to do |format|
       if @status.save
@@ -74,7 +74,7 @@ class StatusesController < ApplicationController
     @status = Status.find(params[:id])
 
     respond_to do |format|
-      if @status.update_attributes(params[:status_type])
+      if @status.update_attributes(params[:status])
         flash[:notice] = 'Status Type was successfully updated.'
         format.html { redirect_to(@status) }
         format.xml  { head :ok }

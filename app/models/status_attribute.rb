@@ -1,5 +1,5 @@
 class StatusAttribute < ActiveRecord::Base
 
-  has_one :status_type
+  belongs_to :status_type_attribute
 
 end

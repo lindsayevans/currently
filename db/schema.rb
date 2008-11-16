@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081116012407) do
+ActiveRecord::Schema.define(:version => 20081116025700) do
 
   create_table "attribute_types", :force => true do |t|
     t.string   "name"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20081116012407) do
     t.integer  "status_type_attribute_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "value"
   end
 
   create_table "status_type_attributes", :force => true do |t|
@@ -48,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20081116012407) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "display_template"
   end
 
   create_table "statuses", :force => true do |t|

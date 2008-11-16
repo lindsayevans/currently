@@ -1,0 +1,10 @@
+
+  <%= form.error_messages %>
+  <p>    <%= form.collection_select :status_type_id, @all_status_types, :id, :name , {:prompt => true} %>
+  </p>
+  <div id="status_type_fields">
+
+  </div>
+  <%= javascript_include_tag '/statuses/insertions.rjs' %>
+  <%= javascript_include_tag 'edit_status' %>
+

@@ -8,6 +8,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'status_types/insertions.rjs', :controller => 'status_types', :action => 'insertions'
   map.resources :status_types
 
+  map.connect 'statuses/insertions.rjs', :controller => 'statuses', :action => 'insertions'
   map.resources :statuses
 
   map.root :controller => 'statuses', :action => 'homepage'

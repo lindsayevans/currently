@@ -9672,3 +9672,1007 @@ Rendering statuses/show
   [4;35;1mStatusTypeAttribute Load (0.000596)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 1) [0m
   [4;36;1mStatusTypeAttribute Load (0.000378)[0m   [0;1mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 2) [0m
 Completed in 0.04358 (22 reqs/sec) | Rendering: 0.01737 (39%) | DB: 0.01503 (34%) | 200 OK [http://localhost/statuses/9]
+
+
+Processing StatusesController#show (for 127.0.0.1 at 2008-11-16 16:36:00) [GET]
+  Session ID: 6a59bbc2c2ae06f19044e4b1ba6d8bc7
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"statuses"}
+  [4;35;1mStatusType Load (0.000623)[0m   [0mSELECT * FROM `status_types` ORDER BY name ASC[0m
+  [4;36;1mStatus Columns (0.018870)[0m   [0;1mSHOW FIELDS FROM `statuses`[0m
+  [4;35;1mStatus Load (0.000392)[0m   [0mSELECT * FROM `statuses` WHERE (`statuses`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering statuses/show
+  [4;36;1mStatusType Columns (0.001953)[0m   [0;1mSHOW FIELDS FROM `status_types`[0m
+  [4;35;1mStatusType Load (0.000293)[0m   [0mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 3) [0m
+  [4;36;1mStatusAttribute Load (0.000481)[0m   [0;1mSELECT * FROM `status_attributes` WHERE (`status_attributes`.status_id = 9) [0m
+  [4;35;1mStatusAttribute Columns (0.001970)[0m   [0mSHOW FIELDS FROM `status_attributes`[0m
+  [4;36;1mStatusTypeAttribute Columns (0.003033)[0m   [0;1mSHOW FIELDS FROM `status_type_attributes`[0m
+  [4;35;1mStatusTypeAttribute Load (0.000477)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 1) [0m
+  [4;36;1mStatusTypeAttribute Load (0.000222)[0m   [0;1mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 2) [0m
+Completed in 0.06310 (15 reqs/sec) | Rendering: 0.01845 (29%) | DB: 0.04554 (72%) | 200 OK [http://localhost/statuses/9]
+
+
+Processing StatusesController#homepage (for 127.0.0.1 at 2008-11-17 01:14:17) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"homepage", "controller"=>"statuses"}
+  [4;36;1mStatusType Load (0.027210)[0m   [0;1mSELECT * FROM `status_types` ORDER BY name ASC[0m
+Rendering template within layouts/application
+Rendering statuses/homepage
+Completed in 0.09300 (10 reqs/sec) | Rendering: 0.02553 (27%) | DB: 0.32693 (351%) | 200 OK [http://localhost/]
+
+
+Processing StatusTypesController#index (for 127.0.0.1 at 2008-11-17 01:14:26) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"status_types"}
+Redirected to http://localhost:3000/status_types
+Filter chain halted as [:remove_trailing_slashes] rendered_or_redirected.
+Completed in 0.00038 (2637 reqs/sec) | DB: 0.10786 (28452%) | 301 Moved Permanently [http://localhost/status_types/]
+
+
+Processing StatusTypesController#index (for 127.0.0.1 at 2008-11-17 01:14:26) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"status_types"}
+  [4;35;1mAttributeType Load (0.000620)[0m   [0mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+  [4;36;1mStatusType Load (0.000444)[0m   [0;1mSELECT * FROM `status_types` [0m
+Rendering template within layouts/application
+Rendering status_types/index
+  [4;35;1mStatusType Columns (0.002253)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+Completed in 0.05192 (19 reqs/sec) | Rendering: 0.02192 (42%) | DB: 0.00404 (7%) | 200 OK [http://localhost/status_types]
+
+
+Processing StatusTypesController#edit (for 127.0.0.1 at 2008-11-17 01:14:30) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"status_types"}
+  [4;36;1mAttributeType Load (0.000233)[0m   [0;1mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+  [4;35;1mStatusType Columns (0.004715)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+  [4;36;1mStatusType Load (0.058071)[0m   [0;1mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering status_types/edit
+  [4;35;1mStatusTypeAttribute Columns (0.002756)[0m   [0mSHOW FIELDS FROM `status_type_attributes`[0m
+Rendered status_type_attributes/_form (0.00782)
+Rendered status_types/_status_type_attribute (0.02430)
+  [4;36;1mSQL (0.021685)[0m   [0;1mSELECT count(*) AS count_all FROM `status_type_attributes` WHERE (`status_type_attributes`.status_type_id = 3) [0m
+  [4;35;1mStatusTypeAttribute Load (0.000521)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.status_type_id = 3) [0m
+Rendered status_type_attributes/_form (0.00083)
+Rendered status_types/_status_type_attribute (0.00161)
+Rendered status_type_attributes/_form (0.00082)
+Rendered status_types/_status_type_attribute (0.00127)
+Rendered status_type_attributes/_form (0.00068)
+Rendered status_types/_status_type_attribute (0.00119)
+Rendered status_type_attributes/_form (0.00086)
+Rendered status_types/_status_type_attribute (0.00144)
+Rendered status_types/_form (0.10772)
+Completed in 0.20589 (4 reqs/sec) | Rendering: 0.10619 (51%) | DB: 0.08883 (43%) | 200 OK [http://localhost/status_types/3/edit]
+
+
+Processing StatusTypesController#insertions (for 127.0.0.1 at 2008-11-17 01:14:30) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"insertions", "controller"=>"status_types"}
+  [4;36;1mAttributeType Load (0.000226)[0m   [0;1mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+Rendering status_types/insertions.js.rjs
+  [4;35;1mStatusTypeAttribute Columns (0.001720)[0m   [0mSHOW FIELDS FROM `status_type_attributes`[0m
+Rendered status_type_attributes/_form (0.00507)
+Rendered status_types/_status_type_attribute (0.00555)
+Completed in 0.07091 (14 reqs/sec) | Rendering: 0.06294 (88%) | DB: 0.00270 (3%) | 200 OK [http://localhost/status_types/insertions.rjs]
+
+
+Processing StatusTypesController#update (for 127.0.0.1 at 2008-11-17 01:14:42) [PUT]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"status_type"=>{"name"=>"Reading", "display_template"=>"<a href=\"#\">{title}</a> by <a href=\"#\">{author}</a>", "existing_status_type_attribute_attributes"=>{"6"=>{"name"=>"title", "api_url_template"=>""}, "7"=>{"name"=>"author", "api_url_template"=>""}, "1"=>{"name"=>"title", "api_url_template"=>""}, "2"=>{"name"=>"author", "api_url_template"=>""}}, "input_template"=>"{title} by {author}"}, "commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"f8a67b9636b717133ba1ffde448f5911790276fe", "id"=>"3", "controller"=>"status_types"}
+  [4;36;1mAttributeType Load (0.000249)[0m   [0;1mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+  [4;35;1mStatusType Columns (0.002010)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+  [4;36;1mStatusType Load (0.000756)[0m   [0;1mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 3) [0m
+  [4;35;1mStatusTypeAttribute Load (0.000465)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.status_type_id = 3) [0m
+  [4;36;1mStatusTypeAttribute Columns (0.002561)[0m   [0;1mSHOW FIELDS FROM `status_type_attributes`[0m
+  [4;35;1mSQL (0.000164)[0m   [0mBEGIN[0m
+  [4;36;1mStatusType Update (0.021057)[0m   [0;1mUPDATE `status_types` SET `updated_at` = '2008-11-16 14:14:42', `display_template` = '<a href=\"#\">{title}</a> by <a href=\"#\">{author}</a>' WHERE `id` = 3[0m
+  [4;35;1mSQL (0.000362)[0m   [0mROLLBACK[0m
+
+
+NameError (undefined local variable or method `status_type_attribute' for #<StatusType:0x226b6bc>):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/attribute_methods.rb:256:in `method_missing'
+    /app/models/status_type.rb:26:in `save_status_type_attributes'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_collection.rb:277:in `method_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_proxy.rb:171:in `method_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_proxy.rb:171:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_proxy.rb:171:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_proxy.rb:171:in `method_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_collection.rb:277:in `method_missing'
+    /app/models/status_type.rb:25:in `save_status_type_attributes'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:173:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:173:in `evaluate_method'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:161:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:93:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:92:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:92:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:92:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:272:in `run_callbacks'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/callbacks.rb:298:in `callback'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/callbacks.rb:235:in `update_without_timestamps'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/timestamp.rb:38:in `update'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:2483:in `create_or_update_without_callbacks'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/callbacks.rb:207:in `create_or_update'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:2211:in `save_without_validation'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/validations.rb:911:in `save_without_dirty'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/dirty.rb:75:in `save_without_transactions'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/transactions.rb:106:in `save'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/transactions.rb:79:in `transaction'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/transactions.rb:98:in `transaction'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/transactions.rb:106:in `save'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/transactions.rb:118:in `rollback_active_record_state!'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/transactions.rb:106:in `save'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:2273:in `update_attributes'
+    /app/controllers/status_types_controller.rb:73:in `update'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:106:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:106:in `respond_to'
+    /app/controllers/status_types_controller.rb:72:in `update'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StatusTypesController#edit (for 127.0.0.1 at 2008-11-17 01:15:18) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"status_types"}
+  [4;36;1mAttributeType Load (0.000272)[0m   [0;1mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+  [4;35;1mStatusType Columns (0.003818)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+  [4;36;1mStatusType Load (0.002291)[0m   [0;1mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering status_types/edit
+  [4;35;1mStatusTypeAttribute Columns (0.001978)[0m   [0mSHOW FIELDS FROM `status_type_attributes`[0m
+Rendered status_type_attributes/_form (0.00267)
+Rendered status_types/_status_type_attribute (0.00320)
+  [4;36;1mSQL (0.002354)[0m   [0;1mSELECT count(*) AS count_all FROM `status_type_attributes` WHERE (`status_type_attributes`.status_type_id = 3) [0m
+  [4;35;1mStatusTypeAttribute Load (0.000420)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.status_type_id = 3) [0m
+Rendered status_type_attributes/_form (0.00075)
+Rendered status_types/_status_type_attribute (0.00138)
+Rendered status_type_attributes/_form (0.00065)
+Rendered status_types/_status_type_attribute (0.00118)
+Rendered status_type_attributes/_form (0.00065)
+Rendered status_types/_status_type_attribute (0.00111)
+Rendered status_type_attributes/_form (0.00078)
+Rendered status_types/_status_type_attribute (0.00128)
+Rendered status_types/_form (0.03058)
+Completed in 0.05160 (19 reqs/sec) | Rendering: 0.02973 (57%) | DB: 0.04024 (77%) | 200 OK [http://localhost/status_types/3/edit]
+
+
+Processing StatusTypesController#insertions (for 127.0.0.1 at 2008-11-17 01:15:18) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"insertions", "controller"=>"status_types"}
+  [4;36;1mAttributeType Load (0.000233)[0m   [0;1mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+Rendering status_types/insertions.js.rjs
+  [4;35;1mStatusTypeAttribute Columns (0.005875)[0m   [0mSHOW FIELDS FROM `status_type_attributes`[0m
+Rendered status_type_attributes/_form (0.00330)
+Rendered status_types/_status_type_attribute (0.00407)
+Completed in 0.03172 (31 reqs/sec) | Rendering: 0.01974 (62%) | DB: 0.00687 (21%) | 200 OK [http://localhost/status_types/insertions.rjs]
+
+
+Processing StatusTypesController#index (for 127.0.0.1 at 2008-11-17 01:21:02) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"status_types"}
+  [4;36;1mAttributeType Load (0.000251)[0m   [0;1mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+  [4;35;1mStatusType Load (0.000365)[0m   [0mSELECT * FROM `status_types` [0m
+Rendering template within layouts/application
+Rendering status_types/index
+  [4;36;1mStatusType Columns (0.002479)[0m   [0;1mSHOW FIELDS FROM `status_types`[0m
+Completed in 0.01883 (53 reqs/sec) | Rendering: 0.00523 (27%) | DB: 0.00442 (23%) | 200 OK [http://localhost/status_types]
+
+
+Processing StatusesController#homepage (for 127.0.0.1 at 2008-11-17 01:21:04) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"homepage", "controller"=>"statuses"}
+  [4;35;1mStatusType Load (0.000489)[0m   [0mSELECT * FROM `status_types` ORDER BY name ASC[0m
+Rendering template within layouts/application
+Rendering statuses/homepage
+Completed in 0.00942 (106 reqs/sec) | Rendering: 0.00182 (19%) | DB: 0.00125 (13%) | 200 OK [http://localhost/]
+
+
+Processing StatusesController#index (for 127.0.0.1 at 2008-11-17 01:21:06) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"statuses"}
+Redirected to http://localhost:3000/statuses
+Filter chain halted as [:remove_trailing_slashes] rendered_or_redirected.
+Completed in 0.00026 (3890 reqs/sec) | DB: 0.00075 (291%) | 301 Moved Permanently [http://localhost/statuses/]
+
+
+Processing StatusesController#index (for 127.0.0.1 at 2008-11-17 01:21:06) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"statuses"}
+  [4;36;1mStatusType Load (0.000436)[0m   [0;1mSELECT * FROM `status_types` ORDER BY name ASC[0m
+  [4;35;1mStatus Load (0.018655)[0m   [0mSELECT * FROM `statuses` [0m
+Rendering template within layouts/application
+Rendering statuses/index
+  [4;36;1mStatus Columns (0.002376)[0m   [0;1mSHOW FIELDS FROM `statuses`[0m
+  [4;35;1mStatusType Columns (0.004010)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+  [4;36;1mStatusType Load (0.000346)[0m   [0;1mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 3) [0m
+  [4;35;1mStatusAttribute Load (0.011502)[0m   [0mSELECT * FROM `status_attributes` WHERE (`status_attributes`.status_id = 9) [0m
+  [4;36;1mStatusAttribute Columns (0.002436)[0m   [0;1mSHOW FIELDS FROM `status_attributes`[0m
+  [4;35;1mStatusTypeAttribute Columns (0.002162)[0m   [0mSHOW FIELDS FROM `status_type_attributes`[0m
+  [4;36;1mStatusTypeAttribute Load (0.000505)[0m   [0;1mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 1) [0m
+  [4;35;1mStatusTypeAttribute Load (0.000345)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 2) [0m
+Completed in 0.16088 (6 reqs/sec) | Rendering: 0.06329 (39%) | DB: 0.04351 (27%) | 200 OK [http://localhost/statuses]
+
+
+Processing StatusesController#show (for 127.0.0.1 at 2008-11-17 01:21:08) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"statuses"}
+  [4;36;1mStatusType Load (0.000470)[0m   [0;1mSELECT * FROM `status_types` ORDER BY name ASC[0m
+  [4;35;1mStatus Columns (0.004854)[0m   [0mSHOW FIELDS FROM `statuses`[0m
+  [4;36;1mStatus Load (0.001889)[0m   [0;1mSELECT * FROM `statuses` WHERE (`statuses`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering statuses/show
+  [4;35;1mStatusType Columns (0.002356)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+  [4;36;1mStatusType Load (0.000398)[0m   [0;1mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 3) [0m
+  [4;35;1mStatusAttribute Load (0.000458)[0m   [0mSELECT * FROM `status_attributes` WHERE (`status_attributes`.status_id = 9) [0m
+  [4;36;1mStatusAttribute Columns (0.002525)[0m   [0;1mSHOW FIELDS FROM `status_attributes`[0m
+  [4;35;1mStatusTypeAttribute Columns (0.002145)[0m   [0mSHOW FIELDS FROM `status_type_attributes`[0m
+  [4;36;1mStatusTypeAttribute Load (0.000522)[0m   [0;1mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 1) [0m
+  [4;35;1mStatusTypeAttribute Load (0.000357)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 2) [0m
+Completed in 0.10927 (9 reqs/sec) | Rendering: 0.08004 (73%) | DB: 0.01667 (15%) | 200 OK [http://localhost/statuses/9]
+
+
+Processing StatusesController#new (for 127.0.0.1 at 2008-11-17 01:21:15) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"new", "controller"=>"statuses"}
+  [4;36;1mStatusType Load (0.000431)[0m   [0;1mSELECT * FROM `status_types` ORDER BY name ASC[0m
+  [4;35;1mStatus Columns (0.001550)[0m   [0mSHOW FIELDS FROM `statuses`[0m
+Rendering template within layouts/application
+Rendering statuses/new
+  [4;36;1mStatusType Columns (0.002276)[0m   [0;1mSHOW FIELDS FROM `status_types`[0m
+Rendered statuses/_form (0.00733)
+Completed in 0.03441 (29 reqs/sec) | Rendering: 0.01916 (55%) | DB: 0.00488 (14%) | 200 OK [http://localhost/statuses/new]
+
+
+Processing StatusesController#insertions (for 127.0.0.1 at 2008-11-17 01:21:15) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"insertions", "controller"=>"statuses"}
+  [4;35;1mStatusType Load (0.000453)[0m   [0mSELECT * FROM `status_types` ORDER BY name ASC[0m
+Rendering statuses/insertions.js.rjs
+  [4;36;1mStatusType Columns (0.008503)[0m   [0;1mSHOW FIELDS FROM `status_types`[0m
+Completed in 0.22509 (4 reqs/sec) | Rendering: 0.20899 (92%) | DB: 0.00976 (4%) | 200 OK [http://localhost/statuses/insertions.rjs]
+
+
+Processing StatusesController#create (for 127.0.0.1 at 2008-11-17 01:21:25) [POST]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"status"=>{"status_type_id"=>"4", "status_attributes_attributes"=>{"food"=>"gruel"}}, "commit"=>"Create", "action"=>"create", "authenticity_token"=>"f8a67b9636b717133ba1ffde448f5911790276fe", "controller"=>"statuses"}
+  [4;35;1mStatusType Load (0.000452)[0m   [0mSELECT * FROM `status_types` ORDER BY name ASC[0m
+  [4;36;1mStatus Columns (0.001945)[0m   [0;1mSHOW FIELDS FROM `statuses`[0m
+adding attributes: --- !map:HashWithIndifferentAccess 
+food: gruel
+  [4;35;1mStatusTypeAttribute Columns (0.002101)[0m   [0mSHOW FIELDS FROM `status_type_attributes`[0m
+  [4;36;1mStatusTypeAttribute Load (0.000322)[0m   [0;1mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`name` = 'food') LIMIT 1[0m
+  [4;35;1mStatusAttribute Columns (0.001746)[0m   [0mSHOW FIELDS FROM `status_attributes`[0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000082)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000079)[0m   [0;1mBEGIN[0m
+  [4;35;1mStatus Create (0.025631)[0m   [0mINSERT INTO `statuses` (`updated_at`, `status_type_id`, `user_id`, `created_at`) VALUES('2008-11-16 14:21:25', 4, NULL, '2008-11-16 14:21:25')[0m
+  [4;36;1mStatusAttribute Create (0.002809)[0m   [0;1mINSERT INTO `status_attributes` (`updated_at`, `status_type_attribute_id`, `value`, `status_id`, `created_at`) VALUES('2008-11-16 14:21:25', 3, 'gruel', 10, '2008-11-16 14:21:25')[0m
+  [4;35;1mSQL (0.000134)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/statuses/10
+Completed in 0.06331 (15 reqs/sec) | DB: 0.03616 (57%) | 302 Found [http://localhost/statuses]
+
+
+Processing StatusesController#show (for 127.0.0.1 at 2008-11-17 01:21:25) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"statuses"}
+  [4;36;1mStatusType Load (0.000463)[0m   [0;1mSELECT * FROM `status_types` ORDER BY name ASC[0m
+  [4;35;1mStatus Columns (0.001527)[0m   [0mSHOW FIELDS FROM `statuses`[0m
+  [4;36;1mStatus Load (0.000618)[0m   [0;1mSELECT * FROM `statuses` WHERE (`statuses`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering statuses/show
+  [4;35;1mStatusType Columns (0.001792)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+  [4;36;1mStatusType Load (0.000639)[0m   [0;1mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 4) [0m
+  [4;35;1mStatusAttribute Load (0.000382)[0m   [0mSELECT * FROM `status_attributes` WHERE (`status_attributes`.status_id = 10) [0m
+  [4;36;1mStatusAttribute Columns (0.003047)[0m   [0;1mSHOW FIELDS FROM `status_attributes`[0m
+  [4;35;1mStatusTypeAttribute Columns (0.002245)[0m   [0mSHOW FIELDS FROM `status_type_attributes`[0m
+  [4;36;1mStatusTypeAttribute Load (0.000407)[0m   [0;1mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 3) [0m
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.gsub!) on line #1 of statuses/show.html.erb:
+1: <h1><%= @status.display %></h1>
+
+    app/models/status.rb:18:in `display'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_collection.rb:277:in `method_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_proxy.rb:171:in `method_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_proxy.rb:171:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_proxy.rb:171:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_proxy.rb:171:in `method_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_collection.rb:277:in `method_missing'
+    app/models/status.rb:16:in `display'
+    app/views/statuses/show.html.erb:1:in `_run_erb_47app47views47statuses47show46html46erb'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `execute'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:35:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:248:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1112:in `render_for_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:869:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:884:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:131:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:131:in `custom'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:160:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:160:in `respond'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:154:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:154:in `respond'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/statuses_controller.rb:32:in `show'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StatusesController#index (for 127.0.0.1 at 2008-11-17 01:22:16) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"statuses"}
+  [4;35;1mStatusType Load (0.000456)[0m   [0mSELECT * FROM `status_types` ORDER BY name ASC[0m
+  [4;36;1mStatus Load (0.000341)[0m   [0;1mSELECT * FROM `statuses` [0m
+Rendering template within layouts/application
+Rendering statuses/index
+  [4;35;1mStatus Columns (0.004679)[0m   [0mSHOW FIELDS FROM `statuses`[0m
+  [4;36;1mStatusType Columns (0.003295)[0m   [0;1mSHOW FIELDS FROM `status_types`[0m
+  [4;35;1mStatusType Load (0.000339)[0m   [0mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 4) [0m
+  [4;36;1mStatusAttribute Load (0.000450)[0m   [0;1mSELECT * FROM `status_attributes` WHERE (`status_attributes`.status_id = 10) [0m
+  [4;35;1mStatusAttribute Columns (0.001689)[0m   [0mSHOW FIELDS FROM `status_attributes`[0m
+  [4;36;1mStatusTypeAttribute Columns (0.002109)[0m   [0;1mSHOW FIELDS FROM `status_type_attributes`[0m
+  [4;35;1mStatusTypeAttribute Load (0.008381)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 3) [0m
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.gsub!) on line #9 of statuses/index.html.erb:
+6: </tr>
+7: <% @statuses.each do |status| %>
+8: <tr>
+9:   <td><%= link_to strip_tags(status.display), status %></td>
+10: </tr>
+11: <% end %>
+12: </table>
+
+    app/models/status.rb:18:in `display'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_collection.rb:277:in `method_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_proxy.rb:171:in `method_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_proxy.rb:171:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_proxy.rb:171:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_proxy.rb:171:in `method_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_collection.rb:277:in `method_missing'
+    app/models/status.rb:16:in `display'
+    app/views/statuses/index.html.erb:9:in `_run_erb_47app47views47statuses47index46html46erb'
+    app/views/statuses/index.html.erb:7:in `each'
+    app/views/statuses/index.html.erb:7:in `_run_erb_47app47views47statuses47index46html46erb'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `execute'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:35:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:248:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1112:in `render_for_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:869:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:884:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:131:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:131:in `custom'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:160:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:160:in `respond'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:154:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:154:in `respond'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/statuses_controller.rb:21:in `index'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StatusesController#homepage (for 127.0.0.1 at 2008-11-17 01:22:20) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"homepage", "controller"=>"statuses"}
+  [4;36;1mStatusType Load (0.000537)[0m   [0;1mSELECT * FROM `status_types` ORDER BY name ASC[0m
+Rendering template within layouts/application
+Rendering statuses/homepage
+Completed in 0.00891 (112 reqs/sec) | Rendering: 0.00149 (16%) | DB: 0.02252 (252%) | 200 OK [http://localhost/]
+
+
+Processing StatusTypesController#index (for 127.0.0.1 at 2008-11-17 01:22:22) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"status_types"}
+Redirected to http://localhost:3000/status_types
+Filter chain halted as [:remove_trailing_slashes] rendered_or_redirected.
+Completed in 0.00027 (3663 reqs/sec) | DB: 0.00078 (284%) | 301 Moved Permanently [http://localhost/status_types/]
+
+
+Processing StatusTypesController#index (for 127.0.0.1 at 2008-11-17 01:22:22) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"status_types"}
+  [4;35;1mAttributeType Load (0.000239)[0m   [0mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+  [4;36;1mStatusType Load (0.000364)[0m   [0;1mSELECT * FROM `status_types` [0m
+Rendering template within layouts/application
+Rendering status_types/index
+  [4;35;1mStatusType Columns (0.005425)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+Completed in 0.02110 (47 reqs/sec) | Rendering: 0.00473 (22%) | DB: 0.00666 (31%) | 200 OK [http://localhost/status_types]
+
+
+Processing StatusTypesController#edit (for 127.0.0.1 at 2008-11-17 01:22:23) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"edit", "id"=>"4", "controller"=>"status_types"}
+  [4;36;1mAttributeType Load (0.000257)[0m   [0;1mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+  [4;35;1mStatusType Columns (0.005793)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+  [4;36;1mStatusType Load (0.002191)[0m   [0;1mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering status_types/edit
+  [4;35;1mStatusTypeAttribute Columns (0.003072)[0m   [0mSHOW FIELDS FROM `status_type_attributes`[0m
+Rendered status_type_attributes/_form (0.00270)
+Rendered status_types/_status_type_attribute (0.00340)
+  [4;36;1mSQL (0.000658)[0m   [0;1mSELECT count(*) AS count_all FROM `status_type_attributes` WHERE (`status_type_attributes`.status_type_id = 4) [0m
+  [4;35;1mStatusTypeAttribute Load (0.000339)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.status_type_id = 4) [0m
+Rendered status_type_attributes/_form (0.00065)
+Rendered status_types/_status_type_attribute (0.00121)
+Rendered status_types/_form (0.02913)
+Completed in 0.05502 (18 reqs/sec) | Rendering: 0.02924 (53%) | DB: 0.01302 (23%) | 200 OK [http://localhost/status_types/4/edit]
+
+
+Processing StatusTypesController#insertions (for 127.0.0.1 at 2008-11-17 01:22:24) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"insertions", "controller"=>"status_types"}
+  [4;36;1mAttributeType Load (0.000283)[0m   [0;1mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+Rendering status_types/insertions.js.rjs
+  [4;35;1mStatusTypeAttribute Columns (0.005513)[0m   [0mSHOW FIELDS FROM `status_type_attributes`[0m
+Rendered status_type_attributes/_form (0.00248)
+Rendered status_types/_status_type_attribute (0.00322)
+Completed in 0.02703 (36 reqs/sec) | Rendering: 0.01523 (56%) | DB: 0.00650 (24%) | 200 OK [http://localhost/status_types/insertions.rjs]
+
+
+Processing StatusTypesController#update (for 127.0.0.1 at 2008-11-17 01:22:29) [PUT]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"status_type"=>{"name"=>"Eating", "display_template"=>"{food}", "new_status_type_attribute_attributes"=>[{"name"=>"food", "api_url_template"=>""}], "existing_status_type_attribute_attributes"=>{"3"=>{"name"=>"food", "api_url_template"=>""}}, "input_template"=>"{food}"}, "commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"f8a67b9636b717133ba1ffde448f5911790276fe", "id"=>"4", "controller"=>"status_types"}
+  [4;36;1mAttributeType Load (0.000253)[0m   [0;1mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+  [4;35;1mStatusType Columns (0.001988)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+  [4;36;1mStatusType Load (0.000373)[0m   [0;1mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 4) [0m
+  [4;35;1mStatusTypeAttribute Load (0.000411)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.status_type_id = 4) [0m
+  [4;36;1mStatusTypeAttribute Columns (0.001808)[0m   [0;1mSHOW FIELDS FROM `status_type_attributes`[0m
+  [4;35;1mSQL (0.000148)[0m   [0mBEGIN[0m
+  [4;36;1mStatusType Update (0.000466)[0m   [0;1mUPDATE `status_types` SET `updated_at` = '2008-11-16 14:22:29', `display_template` = '{food}' WHERE `id` = 4[0m
+  [4;35;1mStatusTypeAttribute Create (0.024007)[0m   [0mINSERT INTO `status_type_attributes` (`attribute_type_id`, `name`, `status_type_id`, `updated_at`, `api_url_template`, `created_at`) VALUES(NULL, 'food', 4, '2008-11-16 14:22:29', '', '2008-11-16 14:22:29')[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/status_types/4
+Completed in 0.05579 (17 reqs/sec) | DB: 0.03050 (54%) | 302 Found [http://localhost/status_types/4]
+
+
+Processing StatusTypesController#show (for 127.0.0.1 at 2008-11-17 01:22:29) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"status_types"}
+  [4;35;1mAttributeType Load (0.000225)[0m   [0mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+  [4;36;1mStatusType Columns (0.002004)[0m   [0;1mSHOW FIELDS FROM `status_types`[0m
+  [4;35;1mStatusType Load (0.000643)[0m   [0mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering status_types/show
+Completed in 0.03502 (28 reqs/sec) | Rendering: 0.02060 (58%) | DB: 0.00402 (11%) | 200 OK [http://localhost/status_types/4]
+
+
+Processing StatusesController#homepage (for 127.0.0.1 at 2008-11-17 01:22:30) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"homepage", "controller"=>"statuses"}
+  [4;36;1mStatusType Load (0.000492)[0m   [0;1mSELECT * FROM `status_types` ORDER BY name ASC[0m
+Rendering template within layouts/application
+Rendering statuses/homepage
+Completed in 0.00840 (119 reqs/sec) | Rendering: 0.00133 (15%) | DB: 0.00278 (33%) | 200 OK [http://localhost/]
+
+
+Processing StatusTypesController#index (for 127.0.0.1 at 2008-11-17 01:22:31) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"status_types"}
+Redirected to http://localhost:3000/status_types
+Filter chain halted as [:remove_trailing_slashes] rendered_or_redirected.
+Completed in 0.00027 (3679 reqs/sec) | DB: 0.00107 (392%) | 301 Moved Permanently [http://localhost/status_types/]
+
+
+Processing StatusTypesController#index (for 127.0.0.1 at 2008-11-17 01:22:32) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"status_types"}
+  [4;35;1mAttributeType Load (0.000251)[0m   [0mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+  [4;36;1mStatusType Load (0.000405)[0m   [0;1mSELECT * FROM `status_types` [0m
+Rendering template within layouts/application
+Rendering status_types/index
+  [4;35;1mStatusType Columns (0.002395)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+Completed in 0.01970 (50 reqs/sec) | Rendering: 0.00519 (26%) | DB: 0.00368 (18%) | 200 OK [http://localhost/status_types]
+
+
+Processing StatusTypesController#edit (for 127.0.0.1 at 2008-11-17 01:22:33) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"edit", "id"=>"5", "controller"=>"status_types"}
+  [4;36;1mAttributeType Load (0.000347)[0m   [0;1mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+  [4;35;1mStatusType Columns (0.005125)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+  [4;36;1mStatusType Load (0.001946)[0m   [0;1mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 5) [0m
+Rendering template within layouts/application
+Rendering status_types/edit
+  [4;35;1mStatusTypeAttribute Columns (0.009206)[0m   [0mSHOW FIELDS FROM `status_type_attributes`[0m
+Rendered status_type_attributes/_form (0.00254)
+Rendered status_types/_status_type_attribute (0.00311)
+  [4;36;1mSQL (0.000553)[0m   [0;1mSELECT count(*) AS count_all FROM `status_type_attributes` WHERE (`status_type_attributes`.status_type_id = 5) [0m
+  [4;35;1mStatusTypeAttribute Load (0.000554)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.status_type_id = 5) [0m
+Rendered status_type_attributes/_form (0.00081)
+Rendered status_types/_status_type_attribute (0.00139)
+Rendered status_type_attributes/_form (0.00078)
+Rendered status_types/_status_type_attribute (0.00132)
+Rendered status_types/_form (0.03383)
+Completed in 0.05649 (17 reqs/sec) | Rendering: 0.02722 (48%) | DB: 0.01857 (32%) | 200 OK [http://localhost/status_types/5/edit]
+
+
+Processing StatusTypesController#insertions (for 127.0.0.1 at 2008-11-17 01:22:33) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"insertions", "controller"=>"status_types"}
+  [4;36;1mAttributeType Load (0.000225)[0m   [0;1mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+Rendering status_types/insertions.js.rjs
+  [4;35;1mStatusTypeAttribute Columns (0.004840)[0m   [0mSHOW FIELDS FROM `status_type_attributes`[0m
+Rendered status_type_attributes/_form (0.00416)
+Rendered status_types/_status_type_attribute (0.00559)
+Completed in 0.03058 (32 reqs/sec) | Rendering: 0.01970 (64%) | DB: 0.00577 (18%) | 200 OK [http://localhost/status_types/insertions.rjs]
+
+
+Processing StatusTypesController#update (for 127.0.0.1 at 2008-11-17 01:22:37) [PUT]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"status_type"=>{"name"=>"Watching", "display_template"=>"{title} on {channel}", "new_status_type_attribute_attributes"=>[{"name"=>"title", "api_url_template"=>""}, {"name"=>"channel", "api_url_template"=>""}], "existing_status_type_attribute_attributes"=>{"4"=>{"name"=>"title", "api_url_template"=>""}, "5"=>{"name"=>"channel", "api_url_template"=>""}}, "input_template"=>"{title} on {channel}"}, "commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"f8a67b9636b717133ba1ffde448f5911790276fe", "id"=>"5", "controller"=>"status_types"}
+  [4;36;1mAttributeType Load (0.000335)[0m   [0;1mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+  [4;35;1mStatusType Columns (0.001886)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+  [4;36;1mStatusType Load (0.000431)[0m   [0;1mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 5) [0m
+  [4;35;1mStatusTypeAttribute Load (0.000493)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.status_type_id = 5) [0m
+  [4;36;1mStatusTypeAttribute Columns (0.001839)[0m   [0;1mSHOW FIELDS FROM `status_type_attributes`[0m
+  [4;35;1mSQL (0.000164)[0m   [0mBEGIN[0m
+  [4;36;1mStatusType Update (0.000408)[0m   [0;1mUPDATE `status_types` SET `updated_at` = '2008-11-16 14:22:37', `display_template` = '{title} on {channel}' WHERE `id` = 5[0m
+  [4;35;1mStatusTypeAttribute Create (0.000267)[0m   [0mINSERT INTO `status_type_attributes` (`attribute_type_id`, `name`, `status_type_id`, `updated_at`, `api_url_template`, `created_at`) VALUES(NULL, 'title', 5, '2008-11-16 14:22:37', '', '2008-11-16 14:22:37')[0m
+  [4;36;1mStatusTypeAttribute Create (0.000180)[0m   [0;1mINSERT INTO `status_type_attributes` (`attribute_type_id`, `name`, `status_type_id`, `updated_at`, `api_url_template`, `created_at`) VALUES(NULL, 'channel', 5, '2008-11-16 14:22:37', '', '2008-11-16 14:22:37')[0m
+  [4;35;1mSQL (0.000093)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/status_types/5
+Completed in 0.03264 (30 reqs/sec) | DB: 0.00676 (20%) | 302 Found [http://localhost/status_types/5]
+
+
+Processing StatusTypesController#show (for 127.0.0.1 at 2008-11-17 01:22:37) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"status_types"}
+  [4;36;1mAttributeType Load (0.000276)[0m   [0;1mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+  [4;35;1mStatusType Columns (0.016661)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+  [4;36;1mStatusType Load (0.002634)[0m   [0;1mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 5) [0m
+Rendering template within layouts/application
+Rendering status_types/show
+Completed in 0.03441 (29 reqs/sec) | Rendering: 0.00185 (5%) | DB: 0.02059 (59%) | 200 OK [http://localhost/status_types/5]
+
+
+Processing StatusesController#homepage (for 127.0.0.1 at 2008-11-17 01:22:40) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"homepage", "controller"=>"statuses"}
+  [4;35;1mStatusType Load (0.000579)[0m   [0mSELECT * FROM `status_types` ORDER BY name ASC[0m
+Rendering template within layouts/application
+Rendering statuses/homepage
+Completed in 0.00933 (107 reqs/sec) | Rendering: 0.00135 (14%) | DB: 0.00184 (19%) | 200 OK [http://localhost/]
+
+
+Processing StatusesController#index (for 127.0.0.1 at 2008-11-17 01:22:41) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"statuses"}
+Redirected to http://localhost:3000/statuses
+Filter chain halted as [:remove_trailing_slashes] rendered_or_redirected.
+Completed in 0.00028 (3597 reqs/sec) | DB: 0.00100 (360%) | 301 Moved Permanently [http://localhost/statuses/]
+
+
+Processing StatusesController#index (for 127.0.0.1 at 2008-11-17 01:22:41) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"statuses"}
+  [4;36;1mStatusType Load (0.000464)[0m   [0;1mSELECT * FROM `status_types` ORDER BY name ASC[0m
+  [4;35;1mStatus Load (0.000524)[0m   [0mSELECT * FROM `statuses` [0m
+Rendering template within layouts/application
+Rendering statuses/index
+  [4;36;1mStatus Columns (0.004506)[0m   [0;1mSHOW FIELDS FROM `statuses`[0m
+  [4;35;1mStatusType Columns (0.003515)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+  [4;36;1mStatusType Load (0.000362)[0m   [0;1mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 4) [0m
+  [4;35;1mStatusAttribute Load (0.000454)[0m   [0mSELECT * FROM `status_attributes` WHERE (`status_attributes`.status_id = 10) [0m
+  [4;36;1mStatusAttribute Columns (0.001797)[0m   [0;1mSHOW FIELDS FROM `status_attributes`[0m
+  [4;35;1mStatusTypeAttribute Columns (0.001846)[0m   [0mSHOW FIELDS FROM `status_type_attributes`[0m
+  [4;36;1mStatusTypeAttribute Load (0.000845)[0m   [0;1mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 3) [0m
+  [4;35;1mStatusType Load (0.000330)[0m   [0mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 3) [0m
+  [4;36;1mStatusAttribute Load (0.000318)[0m   [0;1mSELECT * FROM `status_attributes` WHERE (`status_attributes`.status_id = 9) [0m
+  [4;35;1mStatusTypeAttribute Load (0.000191)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 1) [0m
+  [4;36;1mStatusTypeAttribute Load (0.000199)[0m   [0;1mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 2) [0m
+Completed in 0.04927 (20 reqs/sec) | Rendering: 0.02223 (45%) | DB: 0.01597 (32%) | 200 OK [http://localhost/statuses]
+
+
+Processing StatusesController#show (for 127.0.0.1 at 2008-11-17 01:22:42) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"statuses"}
+  [4;35;1mStatusType Load (0.000498)[0m   [0mSELECT * FROM `status_types` ORDER BY name ASC[0m
+  [4;36;1mStatus Columns (0.004557)[0m   [0;1mSHOW FIELDS FROM `statuses`[0m
+  [4;35;1mStatus Load (0.001887)[0m   [0mSELECT * FROM `statuses` WHERE (`statuses`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering statuses/show
+  [4;36;1mStatusType Columns (0.002472)[0m   [0;1mSHOW FIELDS FROM `status_types`[0m
+  [4;35;1mStatusType Load (0.000904)[0m   [0mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 4) [0m
+  [4;36;1mStatusAttribute Load (0.000628)[0m   [0;1mSELECT * FROM `status_attributes` WHERE (`status_attributes`.status_id = 10) [0m
+  [4;35;1mStatusAttribute Columns (0.009469)[0m   [0mSHOW FIELDS FROM `status_attributes`[0m
+  [4;36;1mStatusTypeAttribute Columns (0.002194)[0m   [0;1mSHOW FIELDS FROM `status_type_attributes`[0m
+  [4;35;1mStatusTypeAttribute Load (0.000467)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 3) [0m
+Completed in 0.05515 (18 reqs/sec) | Rendering: 0.01961 (35%) | DB: 0.02375 (43%) | 200 OK [http://localhost/statuses/10]
+
+
+Processing StatusesController#index (for 127.0.0.1 at 2008-11-17 01:23:14) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"statuses"}
+  [4;36;1mStatusType Load (0.000650)[0m   [0;1mSELECT * FROM `status_types` ORDER BY name ASC[0m
+  [4;35;1mStatus Load (0.000454)[0m   [0mSELECT * FROM `statuses` [0m
+Rendering template within layouts/application
+Rendering statuses/index
+  [4;36;1mStatus Columns (0.004351)[0m   [0;1mSHOW FIELDS FROM `statuses`[0m
+  [4;35;1mStatusType Columns (0.003842)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+  [4;36;1mStatusType Load (0.002121)[0m   [0;1mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 4) [0m
+  [4;35;1mStatusAttribute Load (0.000480)[0m   [0mSELECT * FROM `status_attributes` WHERE (`status_attributes`.status_id = 10) [0m
+  [4;36;1mStatusAttribute Columns (0.001714)[0m   [0;1mSHOW FIELDS FROM `status_attributes`[0m
+  [4;35;1mStatusTypeAttribute Columns (0.006339)[0m   [0mSHOW FIELDS FROM `status_type_attributes`[0m
+  [4;36;1mStatusTypeAttribute Load (0.000453)[0m   [0;1mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 3) [0m
+  [4;35;1mStatusType Load (0.000287)[0m   [0mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 3) [0m
+  [4;36;1mStatusAttribute Load (0.000298)[0m   [0;1mSELECT * FROM `status_attributes` WHERE (`status_attributes`.status_id = 9) [0m
+  [4;35;1mStatusTypeAttribute Load (0.000206)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 1) [0m
+  [4;36;1mStatusTypeAttribute Load (0.000218)[0m   [0;1mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 2) [0m
+Completed in 0.05577 (17 reqs/sec) | Rendering: 0.02187 (39%) | DB: 0.02209 (39%) | 200 OK [http://localhost/statuses]
+
+
+Processing StatusesController#index (for 127.0.0.1 at 2008-11-17 01:23:36) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"statuses"}
+  [4;35;1mStatusType Load (0.000470)[0m   [0mSELECT * FROM `status_types` ORDER BY name ASC[0m
+  [4;36;1mStatus Load (0.000348)[0m   [0;1mSELECT * FROM `statuses` [0m
+Rendering template within layouts/application
+Rendering statuses/index
+  [4;35;1mStatus Columns (0.005046)[0m   [0mSHOW FIELDS FROM `statuses`[0m
+  [4;36;1mStatusType Columns (0.004092)[0m   [0;1mSHOW FIELDS FROM `status_types`[0m
+  [4;35;1mStatusType Load (0.000949)[0m   [0mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 4) [0m
+  [4;36;1mStatusAttribute Load (0.000420)[0m   [0;1mSELECT * FROM `status_attributes` WHERE (`status_attributes`.status_id = 10) [0m
+  [4;35;1mStatusAttribute Columns (0.001568)[0m   [0mSHOW FIELDS FROM `status_attributes`[0m
+  [4;36;1mStatusTypeAttribute Columns (0.008237)[0m   [0;1mSHOW FIELDS FROM `status_type_attributes`[0m
+  [4;35;1mStatusTypeAttribute Load (0.000395)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 3) [0m
+  [4;36;1mStatusType Load (0.000342)[0m   [0;1mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 3) [0m
+  [4;35;1mStatusAttribute Load (0.000311)[0m   [0mSELECT * FROM `status_attributes` WHERE (`status_attributes`.status_id = 9) [0m
+  [4;36;1mStatusTypeAttribute Load (0.000210)[0m   [0;1mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 1) [0m
+  [4;35;1mStatusTypeAttribute Load (0.000193)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 2) [0m
+Completed in 0.05313 (18 reqs/sec) | Rendering: 0.01923 (36%) | DB: 0.02332 (43%) | 200 OK [http://localhost/statuses]
+
+
+Processing StatusesController#new (for 127.0.0.1 at 2008-11-17 01:23:48) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"new", "controller"=>"statuses"}
+  [4;36;1mStatusType Load (0.000534)[0m   [0;1mSELECT * FROM `status_types` ORDER BY name ASC[0m
+  [4;35;1mStatus Columns (0.004578)[0m   [0mSHOW FIELDS FROM `statuses`[0m
+Rendering template within layouts/application
+Rendering statuses/new
+  [4;36;1mStatusType Columns (0.003459)[0m   [0;1mSHOW FIELDS FROM `status_types`[0m
+Rendered statuses/_form (0.00786)
+Completed in 0.02794 (35 reqs/sec) | Rendering: 0.00763 (27%) | DB: 0.00930 (33%) | 200 OK [http://localhost/statuses/new]
+
+
+Processing StatusesController#insertions (for 127.0.0.1 at 2008-11-17 01:23:48) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"insertions", "controller"=>"statuses"}
+  [4;35;1mStatusType Load (0.000449)[0m   [0mSELECT * FROM `status_types` ORDER BY name ASC[0m
+Rendering statuses/insertions.js.rjs
+  [4;36;1mStatusType Columns (0.004597)[0m   [0;1mSHOW FIELDS FROM `status_types`[0m
+Completed in 0.02052 (48 reqs/sec) | Rendering: 0.00884 (43%) | DB: 0.00595 (29%) | 200 OK [http://localhost/statuses/insertions.rjs]
+
+
+Processing StatusesController#create (for 127.0.0.1 at 2008-11-17 01:24:00) [POST]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"status"=>{"status_type_id"=>"5", "status_attributes_attributes"=>{"title"=>"Crap", "channel"=>"TV"}}, "commit"=>"Create", "action"=>"create", "authenticity_token"=>"f8a67b9636b717133ba1ffde448f5911790276fe", "controller"=>"statuses"}
+  [4;35;1mStatusType Load (0.000553)[0m   [0mSELECT * FROM `status_types` ORDER BY name ASC[0m
+  [4;36;1mStatus Columns (0.002409)[0m   [0;1mSHOW FIELDS FROM `statuses`[0m
+adding attributes: --- !map:HashWithIndifferentAccess 
+title: Crap
+channel: TV
+  [4;35;1mStatusTypeAttribute Columns (0.001751)[0m   [0mSHOW FIELDS FROM `status_type_attributes`[0m
+  [4;36;1mStatusTypeAttribute Load (0.001155)[0m   [0;1mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`name` = 'title') LIMIT 1[0m
+  [4;35;1mStatusAttribute Columns (0.002354)[0m   [0mSHOW FIELDS FROM `status_attributes`[0m
+  [4;36;1mSQL (0.002996)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000077)[0m   [0mCOMMIT[0m
+  [4;36;1mStatusTypeAttribute Load (0.000387)[0m   [0;1mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`name` = 'channel') LIMIT 1[0m
+  [4;35;1mSQL (0.000084)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000068)[0m   [0mBEGIN[0m
+  [4;36;1mStatus Create (0.000289)[0m   [0;1mINSERT INTO `statuses` (`updated_at`, `status_type_id`, `user_id`, `created_at`) VALUES('2008-11-16 14:24:00', 5, NULL, '2008-11-16 14:24:00')[0m
+  [4;35;1mStatusAttribute Create (0.000291)[0m   [0mINSERT INTO `status_attributes` (`updated_at`, `status_type_attribute_id`, `value`, `status_id`, `created_at`) VALUES('2008-11-16 14:24:00', 1, 'Crap', 11, '2008-11-16 14:24:00')[0m
+  [4;36;1mStatusAttribute Create (0.000201)[0m   [0;1mINSERT INTO `status_attributes` (`updated_at`, `status_type_attribute_id`, `value`, `status_id`, `created_at`) VALUES('2008-11-16 14:24:00', 5, 'TV', 11, '2008-11-16 14:24:00')[0m
+  [4;35;1mSQL (0.000076)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/statuses/11
+Completed in 0.14547 (6 reqs/sec) | DB: 0.01378 (9%) | 302 Found [http://localhost/statuses]
+
+
+Processing StatusesController#show (for 127.0.0.1 at 2008-11-17 01:24:00) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"statuses"}
+  [4;36;1mStatusType Load (0.000530)[0m   [0;1mSELECT * FROM `status_types` ORDER BY name ASC[0m
+  [4;35;1mStatus Columns (0.002178)[0m   [0mSHOW FIELDS FROM `statuses`[0m
+  [4;36;1mStatus Load (0.001021)[0m   [0;1mSELECT * FROM `statuses` WHERE (`statuses`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering statuses/show
+  [4;35;1mStatusType Columns (0.005626)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+  [4;36;1mStatusType Load (0.000325)[0m   [0;1mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 5) [0m
+  [4;35;1mStatusAttribute Load (0.002952)[0m   [0mSELECT * FROM `status_attributes` WHERE (`status_attributes`.status_id = 11) [0m
+  [4;36;1mStatusAttribute Columns (0.002889)[0m   [0;1mSHOW FIELDS FROM `status_attributes`[0m
+  [4;35;1mStatusTypeAttribute Columns (0.001968)[0m   [0mSHOW FIELDS FROM `status_type_attributes`[0m
+  [4;36;1mStatusTypeAttribute Load (0.001200)[0m   [0;1mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 1) [0m
+  [4;35;1mStatusTypeAttribute Load (0.000191)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 5) [0m
+Completed in 0.04978 (20 reqs/sec) | Rendering: 0.01693 (34%) | DB: 0.01992 (40%) | 200 OK [http://localhost/statuses/11]
+
+
+Processing StatusesController#homepage (for 127.0.0.1 at 2008-11-17 01:24:02) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"homepage", "controller"=>"statuses"}
+  [4;36;1mStatusType Load (0.000448)[0m   [0;1mSELECT * FROM `status_types` ORDER BY name ASC[0m
+Rendering template within layouts/application
+Rendering statuses/homepage
+Completed in 0.01007 (99 reqs/sec) | Rendering: 0.00181 (17%) | DB: 0.00426 (42%) | 200 OK [http://localhost/]
+
+
+Processing StatusesController#index (for 127.0.0.1 at 2008-11-17 01:24:03) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"statuses"}
+Redirected to http://localhost:3000/statuses
+Filter chain halted as [:remove_trailing_slashes] rendered_or_redirected.
+Completed in 0.00027 (3637 reqs/sec) | DB: 0.00121 (441%) | 301 Moved Permanently [http://localhost/statuses/]
+
+
+Processing StatusesController#index (for 127.0.0.1 at 2008-11-17 01:24:03) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"statuses"}
+  [4;35;1mStatusType Load (0.000459)[0m   [0mSELECT * FROM `status_types` ORDER BY name ASC[0m
+  [4;36;1mStatus Load (0.000582)[0m   [0;1mSELECT * FROM `statuses` [0m
+Rendering template within layouts/application
+Rendering statuses/index
+  [4;35;1mStatus Columns (0.004485)[0m   [0mSHOW FIELDS FROM `statuses`[0m
+  [4;36;1mStatusType Columns (0.003973)[0m   [0;1mSHOW FIELDS FROM `status_types`[0m
+  [4;35;1mStatusType Load (0.001015)[0m   [0mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 5) [0m
+  [4;36;1mStatusAttribute Load (0.000521)[0m   [0;1mSELECT * FROM `status_attributes` WHERE (`status_attributes`.status_id = 11) [0m
+  [4;35;1mStatusAttribute Columns (0.002636)[0m   [0mSHOW FIELDS FROM `status_attributes`[0m
+  [4;36;1mStatusTypeAttribute Columns (0.004291)[0m   [0;1mSHOW FIELDS FROM `status_type_attributes`[0m
+  [4;35;1mStatusTypeAttribute Load (0.000583)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 1) [0m
+  [4;36;1mStatusTypeAttribute Load (0.000269)[0m   [0;1mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 5) [0m
+  [4;35;1mStatusType Load (0.000301)[0m   [0mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 4) [0m
+  [4;36;1mStatusAttribute Load (0.000322)[0m   [0;1mSELECT * FROM `status_attributes` WHERE (`status_attributes`.status_id = 10) [0m
+  [4;35;1mStatusTypeAttribute Load (0.000235)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 3) [0m
+  [4;36;1mStatusType Load (0.000232)[0m   [0;1mSELECT * FROM `status_types` WHERE (`status_types`.`id` = 3) [0m
+  [4;35;1mStatusAttribute Load (0.000289)[0m   [0mSELECT * FROM `status_attributes` WHERE (`status_attributes`.status_id = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 1) [0m
+  [4;35;1mStatusTypeAttribute Load (0.000221)[0m   [0mSELECT * FROM `status_type_attributes` WHERE (`status_type_attributes`.`id` = 2) [0m
+Completed in 0.06006 (16 reqs/sec) | Rendering: 0.02645 (44%) | DB: 0.02106 (35%) | 200 OK [http://localhost/statuses]
+
+
+Processing StatusesController#homepage (for 127.0.0.1 at 2008-11-17 01:24:24) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"homepage", "controller"=>"statuses"}
+  [4;36;1mStatusType Load (0.000469)[0m   [0;1mSELECT * FROM `status_types` ORDER BY name ASC[0m
+Rendering template within layouts/application
+Rendering statuses/homepage
+Completed in 0.00824 (121 reqs/sec) | Rendering: 0.00129 (15%) | DB: 0.00161 (19%) | 200 OK [http://localhost/]
+
+
+Processing StatusTypesController#index (for 127.0.0.1 at 2008-11-17 01:24:26) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"status_types"}
+Redirected to http://localhost:3000/status_types
+Filter chain halted as [:remove_trailing_slashes] rendered_or_redirected.
+Completed in 0.00160 (623 reqs/sec) | DB: 0.00080 (49%) | 301 Moved Permanently [http://localhost/status_types/]
+
+
+Processing StatusTypesController#index (for 127.0.0.1 at 2008-11-17 01:24:26) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"status_types"}
+  [4;35;1mAttributeType Load (0.000225)[0m   [0mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+  [4;36;1mStatusType Load (0.000452)[0m   [0;1mSELECT * FROM `status_types` [0m
+Rendering template within layouts/application
+Rendering status_types/index
+  [4;35;1mStatusType Columns (0.004222)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+Completed in 0.02428 (41 reqs/sec) | Rendering: 0.00758 (31%) | DB: 0.00558 (22%) | 200 OK [http://localhost/status_types]
+
+
+Processing StatusTypesController#new (for 127.0.0.1 at 2008-11-17 01:24:29) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"new", "controller"=>"status_types"}
+  [4;36;1mAttributeType Load (0.000350)[0m   [0;1mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+  [4;35;1mStatusType Columns (0.270062)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+Rendering template within layouts/application
+Rendering status_types/new
+  [4;36;1mStatusTypeAttribute Columns (0.007355)[0m   [0;1mSHOW FIELDS FROM `status_type_attributes`[0m
+Rendered status_type_attributes/_form (0.00246)
+Rendered status_types/_status_type_attribute (0.00303)
+Rendered status_types/_form (0.02729)
+Completed in 0.33621 (2 reqs/sec) | Rendering: 0.04658 (13%) | DB: 0.27879 (82%) | 200 OK [http://localhost/status_types/new]
+
+
+Processing StatusTypesController#insertions (for 127.0.0.1 at 2008-11-17 01:24:30) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"insertions", "controller"=>"status_types"}
+  [4;35;1mAttributeType Load (0.000293)[0m   [0mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+Rendering status_types/insertions.js.rjs
+  [4;36;1mStatusTypeAttribute Columns (0.216527)[0m   [0;1mSHOW FIELDS FROM `status_type_attributes`[0m
+Rendered status_type_attributes/_form (0.00223)
+Rendered status_types/_status_type_attribute (0.00276)
+Completed in 0.23636 (4 reqs/sec) | Rendering: 0.01341 (5%) | DB: 0.21776 (92%) | 200 OK [http://localhost/status_types/insertions.rjs]
+
+
+Processing StatusTypesController#index (for 127.0.0.1 at 2008-11-17 01:24:54) [GET]
+  Session ID: 0e557f0165505936982a79ac84901676
+  Parameters: {"action"=>"index", "controller"=>"status_types"}
+  [4;35;1mAttributeType Load (0.000220)[0m   [0mSELECT * FROM `attribute_types` ORDER BY name ASC[0m
+  [4;36;1mStatusType Load (0.000355)[0m   [0;1mSELECT * FROM `status_types` [0m
+Rendering template within layouts/application
+Rendering status_types/index
+  [4;35;1mStatusType Columns (0.005262)[0m   [0mSHOW FIELDS FROM `status_types`[0m
+Completed in 0.02136 (46 reqs/sec) | Rendering: 0.00529 (24%) | DB: 0.00729 (34%) | 200 OK [http://localhost/status_types]

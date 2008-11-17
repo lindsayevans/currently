@@ -6,7 +6,7 @@
 </tr>
 <% @statuses.each do |status| %>
 <tr>
-  <td><%= link_to strip_tags(status.display), status %></td>
+  <td><%= link_to status.status_type[:name] + ' ' + strip_tags(status.display), status %></td>
 </tr>
 <% end %>
 </table>

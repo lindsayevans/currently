@@ -22,7 +22,7 @@ class StatusType < ActiveRecord::Base
   end
 
   def save_status_type_attributes
-    status_type_attributes.each do |place|
+    status_type_attributes.each do |status_type_attribute|
       status_type_attribute.save(false)
     end
   end
